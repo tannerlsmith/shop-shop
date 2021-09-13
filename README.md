@@ -1,4 +1,5 @@
 # shop-shop
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![screenshot of the website](./client/public/images/readme-screenshot.jpg)
 
 
