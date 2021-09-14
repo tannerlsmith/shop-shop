@@ -9,6 +9,8 @@
 <br>
 <p>Docs for Use Reducer Hook: https://reactjs.org/docs/hooks-reference.html#usereducer</p>
 <p>Docs for Context API: https://reactjs.org/docs/context.html</p> 
+<p>Docs for Use Effect Hook: https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects </p>
+
 
 
 
