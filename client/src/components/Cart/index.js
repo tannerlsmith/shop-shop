@@ -2,6 +2,8 @@ import React from 'react';
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
 import './style.css';
+import { useStoreContext } from '../../utils/GlobalState';
+import { TOGGLE_CART } from '../../utils/actions';
 
 const Cart = () => {
   return (
@@ -22,6 +24,8 @@ const Cart = () => {
                 :
                 <span>(log in to check out)</span>
             }
+
+            
           </div>
         </div>
     </div>
