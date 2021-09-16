@@ -11,14 +11,14 @@ import {
   UPDATE_PRODUCTS,
 } from "../utils/actions";
 import { QUERY_PRODUCTS } from "../utils/queries";
-import spinner from '../assets/spinner.gif';
 import { idbPromise } from "../utils/helpers";
+import spinner from '../assets/spinner.gif'
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
 
-  const [currentProduct, setCurrentProduct] = useState({})
+  const [currentProduct, setCurrentProduct] = useState({});
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
@@ -35,7 +35,7 @@ function Detail() {
         type: UPDATE_PRODUCTS,
         products: data.products
       });
-  
+
       data.products.forEach((product) => {
         idbPromise('products', 'put', product);
       });
@@ -69,6 +69,7 @@ function Detail() {
         product: { ...currentProduct, purchaseQuantity: 1 }
       });
       idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
+
     }
   }
 
@@ -78,8 +79,7 @@ function Detail() {
       _id: currentProduct._id
     });
 
-    idbPromise('cart', 'delete', { ...currentProduct});
-
+    idbPromise('cart', 'delete', { ...currentProduct });
   };
 
   return (
